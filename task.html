@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Functions!!</title>
+</head>
+
+<body>
+    <!-- <button class="clickMe">Click Me!</button> -->
+
+    <!-- <script>
+        function handleClick() {
+            console.log("Great clicking!!");
+            button.addEventListener("click", handleClick);
+            button.addEventListener("click", function () {
+                console.log("nice Job!");
+            })
+        };
+    </script> -->
+    <!-- <script>
+        setTimeout(function () {
+            console.log("DONE TIME TO EAT");
+        }, 1000);
+    </script> -->
+    <!-- <script>
+ function outer() {
+  const outerVar = "Hey I am the outer Var";
+  function inner() {
+    const innerVar = "hey I am an inner var";
+    console.log(innerVar);
+    console.log(outerVar);
+  }
+  return inner;
+}
+
+const innerFn = outer();
+innerFn();
+</script> -->
+    <!-- <script>
+        function createGreeting(greeting = "") {
+            const myGreet = greeting.toUpperCase();
+            return function (name) {
+                return `${myGreet} ${name}`;
+            };
+        }
+        const sayHello = createGreeting('hello');
+        const sayHey = createGreeting('hey');
+        console.log(sayHello('wes'));
+        console.log(sayHello('kait'));
+        console.log(sayHey('kait'));
+    </script> -->
+    <!-- <script>
+        function createGame(gameName) {
+            let score = 0;
+            return function win() {
+                score++;
+                return `Your name ${gameName} score is ${score}`
+            }
+        }
+        const hockeyGame = createGame('Hockey');
+    </script> -->
+    <!-- <article class="item">
+        <h2>Im an article</h2>
+        <p class="pizza">This is how many pizzas I ate! 🍕</p>
+    </article>
+
+    <script>
+        const pizzaList = document.querySelector('.pizza');
+
+        pizzaList.textContent = `${pizzaList.textContent} 🍕`;
+        pizzaList.insertAdjacentText("afterbegin", '🍕')
+        console.log(pizzaList.textContent);
+    </script> -->
+    <!-- <script>
+        const myParagraph = document.createElement('p');
+        myParagraph.textContent = 'I am a p!';
+        myParagraph.classList.add('special');
+        console.log(myParagraph);
+
+        const myImage = document.createElement('img');
+        myImage.src = "https://picsum.photos/500";
+        myImage.alt = "Nice photo";
+        console.log(myImage);
+
+        const myDiv = document.createElement('div');
+        myDiv.classList.add('wrapper');
+        console.log(myDiv);
+
+        const heading = document.createElement('h2');
+        heading.textContent = 'Cool things';
+        myDiv.appendChild(heading);
+        myDiv.insertAdjacentElement('beforebegin', heading);
+        document.body.appendChild(myParagraph);
+        document.body.appendChild(myImage);
+        document.body.appendChild(myDiv);
+    </script> -->
+
+    <!-- <ul>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+        <li>four</li>
+        <li>five</li>
+    </ul>
+    <script>
+        const list = document.createElement('ul');
+        const li = document.createElement('li');
+        li.textContent = 'three';
+        list.appendChild(li);
+        document.body.insertAdjacentElement('afterbegin', list);
+
+        const li5 = document.createElement('li');
+        li5.textContent = 'Five';
+        list.append(li5);
+        const li1 = li5.cloneNode(true);
+        li1.textContent = 'one';
+        list.insertAdjacentElement('afterbegin', li1);
+
+        const li4 = document.createElement('li');
+        li4.textContent = 'Four';
+        li5.insertAdjacentElement('beforebegin', li4);
+
+        const li2 = document.createElement("li");
+        li2.textContent = "Two";
+        li1.insertAdjacentElement("afterend", li2);
+        // const li1 = li5.cloneNode();
+        // list.insertAdjacentElement('afterbegin', li1);
+    </script> -->
+    <!-- <p class="wes">
+        I am Wes, I <em>love</em> to bbq and <strong>Make websites!</strong>
+    </p>
+    <script>
+        const p = document.createElement("p");
+        p.textContent = "I will be removed";
+        document.body.appendChild(p);
+        p.remove();
+        const wes = document.querySelector('.wes');
+        console.log(wes);
+        console.log(wes.firstElementChild);
+        console.log(wes.lastElementChild);
+        console.log(wes.previousElementSibling);
+        console.log(wes.nextElementSibling);
+        console.log(wes.parentElement);
+        console.log(wes.childNode);
+    </script> -->
+    <!-- <div class="playerCard">
+        <h2>NAME — AGE</h2>
+        <p>They are HEIGHT and AGE years old. In Dog years this person would be AGEINDOGYEARS. That would be a tall dog!
+        </p>
+    </div>
+    <script>
+        function generatePlayerCard(name, age, height) {
+            const html = `
+    <div class="playerCard">
+      <h2>${name} - ${age}</h2>
+      <p>They are ${height} and ${age} years old. In Dog years this person would be ${age * 7}. That would be a tall dog!</p>
+    </div>
+  `;
+            return html;
+
+            const cards = document.createElement();
+            cards.classList.add('cards');
+            const cardsHTML = generatePlayerCard('wes', 12, 150);
+            console.log(cardsHTML);
+            document.createElement('div');
+        }
+
+
+        const cardsHTML = generatePlayerCards('wes', 12, 150);
+        cardsHTML = cardsHTML + generatePlayerCard('scott', 12, 150);
+        cardsHTML = cardsHTML + generatePlayerCard('kait', 12, 150);
+        cardsHTML = cardsHTML + generatePlayerCard('snickers', 12, 150);
+        console.log(cardsHTML);
+    </script> -->
+
+
+    <!-- <button class="butts">Click Me!</button>
+    <script>
+        const butts = document.querySelector('.butts');
+        butts.addEventListener('click', function () {
+           console.log("IT GOT CLICKED!!") 
+        });
+    </script> -->
+
+    <!-- <button data-price="100" class="buy">Buy Item 1</button>
+    <button data-price="200" class="buy">Buy Item 2</button>
+    <button data-price="300" class="buy">Buy Item 3</button>
+    <button data-price="400" class="buy">Buy Item 4</button>
+    <button data-price="500" class="buy">Buy Item 5</button>
+    <button data-price="600" class="buy">Buy Item 6</button>
+    <button data-price="700" class="buy">Buy Item 7</button>
+    <button data-price="800" class="buy">Buy Item 8</button>
+    <button data-price="900" class="buy">Buy Item 9</button>
+    <button data-price="1000" class="buy">Buy Item 10</button>
+    <script>
+        function handleBuyButtonClick(event) {
+            console.log('You are buying it!!');
+            console.log(event.target.dataset);
+            console.log(parseFloat(event.target.dataset.price));
+        }
+        function handleBuyButtonClick(event) {
+            const button = event.target;
+            console.log(event.currentTarget);
+        }
+
+        function handleBuyButtonClick(event) {
+            const button = event.target;
+            // console.log(button.textContent);
+            // console.log(parseFloat(event.target.dataset.price));
+            console.log(event.target);
+            console.log(event.currentTarget);
+            console.log(event.target === event.currentTarget);
+        }
+    </script> -->
+    <!-- <img class="photo" src="https://picsum.photos/200" alt="Nice">
+    <script>
+        const photoEl = document.querySelector(".photo");
+        photoEl.addEventListener("mousemove", function (e) {
+            console.log(e.currentTarget);
+            console.count(e.currentTarget);
+        });
+    </script> -->
+
+    <!-- <a class="wes" href="https://wesbos.com">Wes Bos</a>
+    <script>
+        wes.addEventListener("click", function(event) {
+  const shouldChangePage = confirm(
+    "This website might be malicious! Do you wish to proceed?"
+  );
+  if (!shouldChangePage) {
+    event.preventDefault();
+  }
+  console.log(shouldChangePage);
+});
+    </script> -->
+
+    <!-- <div class="canvasWrap">
+        <canvas width="1600" height="1000" id="etch-a-sketch"></canvas>
+        <div class="buttons">
+            <button class="shake">Shake!</button>
+        </div>
+    </div>
+    <script src="./etch-a-sketch"></script>
+    <style>
+        body {
+            min-height: 100vh;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            background: white;
+            background: url(https://s3.amazonaws.com/media.locally.net/original/HABA_ALT_2017-08-02-13-22-45.jpg);
+            background-size: cover;
+        }
+
+        canvas {
+            border: 30px solid #e80000;
+            border-radius: 10px;
+            /* Set the width and height to half the actual size so it doesn't look pixelated */
+            width: 800px;
+            height: 500px;
+            background: white;
+        }
+
+        canvas.shake {
+            animation: shake 0.5s linear 1;
+        }
+
+        @keyframes shake {
+
+            10%,
+            90% {
+                transform: translate3d(-1px, 0, 0);
+            }
+
+            20%,
+            80% {
+                transform: translate3d(2px, 0, 0);
+            }
+
+            30%,
+            50%,
+            70% {
+                transform: translate3d(-4px, 0, 0);
+            }
+
+            40%,
+            60% {
+                transform: translate3d(4px, 0, 0);
+            }
+        }
+    </style>
+    <script>
+        const canvas = document.querySelector('#etch-a-sketch');
+        const ctx = canvas.getContext('2d');
+        const shakebutton = document.querySelector('.shake');
+        ctx.lineJoin = 'round';
+        ctx.lineCap = 'round';
+        ctx.lineWidth = 10;
+        ctx.moveTo(200, 200);
+        ctx.lineTo(200, 200)
+        ctx.stroke();
+        const { width, height } = canvas;
+        let x = Math.floor(Math.random() * width);
+        ctx.beginPath();
+        ctx.moveTo(x, 200);
+        ctx.lineTo(x, 200);
+        ctx.stroke();
+        let y = Math.floor(Math.random() * height);
+        ctx.moveTo(x, y);
+        ctx.lineTo(x, y);
+        function handleKey() {
+            console.log("HANDLING KEY");
+        }
+        window.addEventListener('keydown', handleKey);
+        function handleKey(e) {
+            // e.preventDefault();
+            console.log(e.key);
+            console.log("HANDLING KEY");
+        }
+        if (e.key.includes("Arrow")) {
+            e.preventDefault();
+            console.log(e.key);
+            console.log("HANDLING KEY");
+        }
+        function draw(options) {
+            console.log(options.key);
+        }
+        functionHandleKey(e); {
+            if (e.key.includes('Arrow')) {
+                e.preventDefault();
+                draw({ key: e.key });
+                console.log(e.key);
+                console.log('HANDLING KEY');
+            }
+        }
+        function draw(options) {
+            console.log(options.key);
+        }
+        function draw({ key }) {
+            console.log(key);
+            ctx.beginPath();
+        }
+        ctx.moveTo(x, y);
+        x = x - 10;
+        y = y - 10;
+        ctx.lineto(x, y);
+        ctx.stroke()
+        const MOVE_AMOUNT = 10;
+        x -= MOVE_AMOUNT;
+        y -= MOVE_AMOUNT;
+        if (key == 'ArrowUp') {
+        } else if (key == 'OtherValue') {
+        }
+        switch (key) {
+            case 'ArrowUp':
+                y = y - MOVE_AMOUNT;
+        }
+        switch (key) {
+            case "ArrowUp":
+                y -= MOVE_AMOUNT;
+            default:
+                break;
+        }
+        switch (key) {
+            case "ArrowUp":
+                y -= MOVE_AMOUNT;
+                break;
+            default:
+                break;
+        }
+        switch (key) {
+            case "ArrowUp":
+                y -= MOVE_AMOUNT;
+                break;
+            case "ArrowRight":
+                x += MOVE_AMOUNT;
+                break;
+            case "ArrowDown":
+                y += MOVE_AMOUNT;
+                break;
+            case "ArrowLeft":
+                x -= MOVE_AMOUNT;
+                break;
+            default:
+                break;
+        }
+    </script> -->
+    <!-- <div class="cards">
+        <div class="card" data-description="Wes is cool">
+            <img src="https://picsum.photos/200?random=1" alt="Wes Bos">
+            <h2>Wes Bos</h2>
+            <button>Learn more →</button>
+        </div>
+        <div class="card" data-description="Scott is neat!">
+            <img src="https://picsum.photos/200?random=2" alt="Wes Bos">
+            <h2>Scott Tolinski</h2>
+            <button>Learn more →</button>
+        </div>
+        <div class="card" data-description="Kait is beautiful!">
+            <img src="https://picsum.photos/200?random=3" alt="Wes Bos">
+            <h2>Kait Bos</h2>
+            <button>Learn more →</button>
+        </div>
+        <div class="card" data-description="Snickers is a dog!">
+            <img src="https://picsum.photos/200?random=4" alt="Wes Bos">
+            <h2>Snickers the dog</h2>
+            <button>Learn more →</button>
+        </div>
+    </div>
+    <div class="modal-outer open">
+        <div class="modal-inner">
+            <p>Testing 123</p>
+        </div>
+    </div>
+    </div>
+    <style>
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-gap: 20px;
+            padding: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 1rem;
+            border-radius: 2px;
+        }
+
+        .card img {
+            width: 100%;
+        }
+
+        .card h2 {
+            color: black;
+        }
+
+        .modal-outer {
+            display: grid;
+            background: hsla(50, 100%, 50%, 0.7);
+            position: fixed;
+            height: 100vh;
+            width: 100vw;
+            top: 0;
+            left: 0;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-inner {
+            max-width: 600px;
+            min-width: 400px;
+            padding: 2rem;
+            border-radius: 5px;
+            min-height: 200px;
+            background: white;
+        }
+
+        .modal-outer {
+            display: grid;
+            background: hsla(50, 100%, 50%, 0.7);
+            position: fixed;
+            height: 100vh;
+            width: 100vw;
+            top: 0;
+            left: 0;
+            justify-content: center;
+            align-items: center;
+            /* hide this modal until we need it */
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .modal-outer.open {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s;
+        }
+    </style> -->
+    <!-- <script>
+        const values = [[], [], -10, 1, 0, "", "full string", " ", undefined, NaN, null];
+        console.group('truthy or falsy values');
+        values.forEach(value => {
+            if (value) {
+                console.log(value, 'is truthy');
+            } else {
+                console.log(value, 'is falsy');
+            }
+            console.log(value);
+        })
+        console.groupEnd('');
+    </script> -->
+    <!-- <img src="./istockphoto-93385233-612x612.jpg" alt="Turt" class="turt">
+    <style>
+        .turt {
+          position: relative;
+          --x: 10px;
+          --y: 10px;
+          transform: translateX(var(--x)) translateY(var(--y));
+        }
+      </style>
+    <script>
+
+        const turtle = document.querySelector(".turt");
+        console.log(turtle);
+
+        function handleKeyDown(event) {
+            console.log(event.key);
+        }
+        window.addEventListener("keydown", handleKeyDown);
+        let x = 0;
+        let y = 0;
+        function handleKeyDown(event) {
+            if (!event.key.includes("Arrow")) { return; }
+        }
+        switch (event.key) {
+            case 'ArrowUp':
+                y = y - 1;
+                break;
+            case 'ArrowDown':
+                y = y + 1;
+                break;
+            case "ArrowLeft":
+                x = x - 1;
+                break;
+            case "ArrowRight":
+                x = x + 1;
+                break;
+            default:
+                console.log("That is not a valid move");
+                break;
+        }
+    </script> -->
+    <!-- <script>
+        function buzzer() {
+          console.log("ENNNNGGGG");
+        }
+        console.log("Starting");
+        setTimeout(buzzer, 500);
+        console.log("Finishing!");
+        function setImmediateInterval(funcToRun, ms) {
+          // right away call that function
+          funcToRun();
+          return setInterval(funcToRun, ms);
+        }
+        setImmediateInterval(buzzer, 2000);
+      </script> -->
+
+    <!-- <script>
+        const wes = new Object({
+            name: "wes",
+            propertyToCheck: "NEVER",
+            age: 100,
+            "cool-dude": true,
+            "really cool": false,
+            "777": true,
+            dog: "snickers",
+            clothing: {
+                shirts: 10,
+                pants: 2
+            },
+            sayHello(greeting = "Hey") {
+                return `${greeting} ${this.name}`;
+            }
+        });
+        sneeze: () => {
+            console.log("AHHHH CHOOO", this);
+        }
+    </script> -->
+    <!-- <script>
+        let name1 = 'wes';
+        let name2 = 'wes';
+        console.log(name1 === name2);
+        name1 = 'scott';
+        console.log(name1 === name2);
+
+        console.log(name1 = name2);
+    </script>
+    <script>
+        const meatInventory = {
+            bacon: 2,
+            sausage: 3.
+        };
+        const veggieInventory = {
+            lettuce: 5,
+            tomatoes: 3,
+        };
+        const inventory = { ...meatInventory, ...veggieInventory, oysters: 10, };
+    </script> -->
+    <!-- <script>
+        const names = ['wes', 'kait', 'snickers', 'wes', 'kait', 'snickers', 'wes', 'kait', 'snickers', 'wes', 'kait', 'snickers', 'wes', 'kait', 'snickers', 'wes', 'kait', 'snickers'];
+        console.log(names[names.length - 6]);
+        console.log(names.length);
+        const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        const numbersReversed = [...numbers].reverse();
+        numbersReversed.reverse();
+        console.log(numbersReversed);
+        console.log(numbers);
+        const pizzaSlice = numbers.slice(2, 4);
+        console.log(pizzaSlice);
+        function deleteComment(id, comments) {
+            // first find the index of the item in the array
+            const commentIndex = comments.findIndex(comment => comment.id === id);
+            // make a new array without that item in it
+            return [
+                ...comments.slice(0, commentIndex),
+                ...comments.slice(commentIndex + 1)
+            ];
+            // return our new array
+        }
+        const range = Array.from({ length: 10 }, function (item, index) {
+            return index;
+        });
+    </script>
+    <script>
+        function createRange(start, end) {
+            const range = Array.from({ length: end - start },
+                function (item, index) {
+                    return index + start;
+                });
+            return range;
+            console.log(Array.isArray(myRange));
+        }
+    </script>
+    <script>
+        const meats = {
+            beyond: 10,
+            beef: 5,
+            pork: 7,
+        };
+        Object.values(meats).forEach(qty => {
+            console.log(qty);
+        });
+        console.log(Object.entries(meats));
+        console.log(Object.keys(meats));
+        console.log(Object.values(meats));
+        const isThereEnoughOfAtLeastOneMeat = Object.values(meats).some(meatValue => meatValue >= 5);
+        const isThereEnoughOfEveryMeat = Object.values(meats).every(meatValue => meatValue >= 3);
+console.log(isThereEnoughOfEveryMeat);
+
+        const foodString = "hot dogs, hamburgers, sausages, corn";
+        console.log(foodString.split(','));
+
+    </script>
+    <script>
+        const feedback = [
+            { comment: "Love the burgs", rating: 4 },
+            { comment: "Horrible Service", rating: 2 },
+            { comment: "Smoothies are great, liked the burger too", rating: 5 },
+            { comment: "Ambiance needs work", rating: 3 },
+            { comment: "I DONT LIKE BURGERS", rating: 1 },
+        ];
+        const legitRatings = feedback.filter(single => single.rating !== 1);
+        console.log(legitRatings);
+    </script> -->
+    <!-- <script>
+        const numbers = [1, 2, 100, 3, 200, 400, 155];
+        const numbersSorted = numbers.sort(function (a, b) {
+            return a - b;
+        });
+        console.log(numbersSorted);
+    </script> -->
+    <!-- <script> -->
+    <!-- // const toppings = ['Mushrooms', 'Tomatoes', 'Eggs', 'Chili', 'Lettuce', 'Avocado', 'Chilles', 'Bacon', 'Pickles', 'Onions', 'Cheese'];
+        // function logTopping(topping) {
+        //     console.log(topping);
+        //     debugger;
+        // }
+        // toppings.forEach(logTopping)
+        // function logTopping(topping, index, array) {
+        //     console.log(topping, index, array);
+        // }
+        // toppings.forEach(logTopping);
+        // console.log(originalArray[index + 1]);
+        // function logTopping(topping, index, originalArray) {
+        //     console.log(topping);
+        //     console.log(originalArray[index + 1]);
+        //     console.log('--------🍕-----');
+        // }
+
+        // const nextTopping = originalArray[index + 1];
+        // const prevTopping = originalArray[index - 1];
+        // prevTopping ? console.log(prevTopping) : null;
+        // nextTopping ? console.log(nextTopping) : null;
+        // console.log('--------🍕-----');
+        // index === array.length - 1 ? console.log('Goodbye') : console.log("getting the next topping");
+        // const faces = ['😃', '🤠', '🤡', '🤑', '😵', '🌞', '🐶', '😺'];
+        // function addArms(face) {
+        //     return `👋${face} 👋`;
+        // }
+        // const toys = faces.map(addArms);
+        // console.log(toys);
+        // const fullNames = ['wes', 'kait', 'poppy']
+        //     .map(capitalize)
+        //     .map(bosify);
+        // console.log(fullNames);
+        // function capitalize(word) {
+        //     return word[0].toUppercase() + word.slice(1);
+        // }
+        // const orderTotals = [342, 1002, 523, 34, 634, 854, 1644, 2222];
+        // const numbersSorted = orderTotals.sort(function (a, b) {
+        //     return a - b;
+        // })
+        // const orderTotalsWithTax = orderTotals.map(total => total * 1.13);
+        // console.log(orderTotals);
+        //         function attachBody(face, body) {
+        //             return `
+        //     ${face}
+        // 　　　　　${body.repeat(3)}
+        // 　　　　 ${Array(3).fill(body).join(' ')}
+        // 　　　👇🏽　 ${body.repeat(2)}　👇🏽
+        //     ${Array(2).fill(body).join('   ')}
+        //     ${Array(2).fill(body).join('   ')}
+        // 　　　　　👢　　👢
+        //   `
+        //         }
+        //         faces.map(face => attachBody(face, '🍟')).forEach(body => console.log(body))
+        // const people = [
+        //     {
+        //         birthday: "April 24, 1997",
+        //         names: {
+        //             first: "Keith",
+        //             last: "Buckley",
+        //         },
+        //     },
+        //     {
+        //         birthday: "January 3, 1975",
+        //         names: {
+        //             first: "Larry",
+        //             last: "Heep",
+        //         },
+        //     },
+        //     {
+        //         birthday: "February 12, 1944",
+        //         names: {
+        //             first: "Linda",
+        //             last: "Bermeer",
+        //         },
+        //     },
+        // ];
+        // const cleanPeople = people.map(function (person) {
+        //     const birthday = new Date(person.birthday).getTime();
+        //     const now = Date.now();
+        //     const age = Math.floor(now - birthday / 31536000000);
+        //     console.log(age);
+        //     return {
+        //         age: age,
+        //         name: `${person.names.first} ${person.names.last}`,
+        //     }
+        //     console.table(cleanPeople);
+        //     const over40 = cleanPeople.filter(function (person) {
+        //         if (person.age > 40) {
+        //             return true;
+        //         } else {
+        //             return false;
+        //         }
+        //     })
+        //     console.table(over40);
+        // })
+
+        // const orderTotals = [342, 1002, 523, 34, 634, 854, 1644, 2222];
+        // let total = 0;
+        // orderTotals.forEach(singleTotal => {
+        //     total = total + singleTotal;
+        // })
+        // console.log(total);
+        // const inventory = [
+        //     { type: "shirt", price: 4000 },
+        //     { type: "pants", price: 4532 },
+        //     { type: "socks", price: 234 },
+        //     { type: "shirt", price: 2343 },
+        //     { type: "pants", price: 2343 },
+        //     { type: "socks", price: 542 },
+        //     { type: "pants", price: 123 },
+        // ];
+        // const inventoryCounts = inventory.reduce(inventoryReducer, {
+        //     shirts: 0,
+        //     pants: 0,
+        //     socks: 0
+        // });
+        //         const text = `
+        // [0, 1, 2, 3, 4].reduce( (accumulator, currentValue, currentIndex, array) => accumulator + currentValue);
+        // If you were to provide an initialValue as the second argument to reduce(), the result would look like this:
+        // The value returned by reduce() in this case would be 20.
+        // Examples
+        // Sum all the values of an array`;
+        //         console.log(text);
+        //         const everything = text.split('');
+        //         console.log(everything);
+        //         const result = everything.filter((char) => {
+        //             // if that characer is a-zA-Z0-9
+        //             if (char.match(/[a-zA-Z]/)) {
+        //                 return true;
+        //             }
+        //             return false;
+        //         });
+        // const name = 'Wes Bos';
+        // for (const letter of name) {
+        //     console.log(letter);
+        // }
+        // const baseHumanStats = {
+        //     feet: 2,
+        //     arms: 2,
+        //     eyes: 2,
+        //     head: 1
+        // };
+        // function Human(name) {
+        //     this.name = name;
+        // }
+        // Human.prototype = baseHumanStats;
+        // const wes2 = new Human('wes');
+        // let cool = true;
+        // while (cool === true) {
+        //     console.log('You are cool');
+        // }
+        //     let cool = true;
+        //     let i = 1;
+        //     while (cool === true) {
+        //         console.log('You are cool');
+        //         i++
+        //         if (i > 100) {
+        //             cool = false;
+        //         }
+        //     }
+        //    do{
+        //         console.log('You are cool');
+        //         i++
+        //         if (i > 10) {
+        //             cool = false;
+        //         }
+        //     } while (cool === true)
+        // function Pizza(toppings = [], customer) {
+        //     console.log("Making a pizza");
+        //     // save the toppings that were passed in, to this instance of pizza
+        //     this.toppings = toppings;
+        //     this.customer = customer;
+        //     this.id = Math.floor(Math.random() * 16777215).toString(16);
+        // }
+        // const pepperoniPizza = new Pizza(["pepperoni"], "Wes Bos");
+        // const canadianPizza = new Pizza(
+        //     ["pepperoni", "mushrooms", "onion"],
+        //     "Kait Bos"
+        // );
+        // this.slices = 10;
+        // this.eat = function () {
+        //     console.log('CHOMP');
+        //     this.slices = this.slices - 1;
+        // }
+        // Pizza.prototype.eat = function () {
+        //     if (this.slices > 0) {
+        //         this.slices = this.slices - 1;
+        //         console.log(`CHOMP you now have ${this.slices} left!`);
+        //     } else {
+        //         console.log(`Sorry! No slices left!`);
+        //     }
+        // };
+        // Pizza.prototype.describe = function () {
+        //     return `This pizza is for ${this.customer} with the toppings ${this.toppings.join(',')} and there are {this.slices} left.`;
+        // }
+    // </script> -->
+
+    <!-- <div class="go">Click Me</div>
+    <style>
+        .go {
+            margin: 1rem;
+            background: black;
+            padding: 5rem;
+            width: 25rem;
+            color: white;
+            height: 25rem;
+            transition: all 0.2s;
+        }
+
+        .go.circle {
+            border-radius: 50%;
+        }
+
+        .go.red {
+            background: red;
+        }
+
+        .go.purple {
+            background: purple;
+            color: white;
+        }
+
+        .go.fadeOut {
+            opacity: 0;
+        }
+    </style> -->
+    <script>
+        // go.addEventListener("click", function (e) {
+        //     const el = e.currentTarget;
+        //     console.log(el);
+        //     // 1. make it a circle after 2 seconds
+        //     setTimeout(function () {
+        //         el.classList.add("circle");
+        //         // 2. make it red after 0.5s
+        //         setTimeout(function () {
+        //             el.classList.add("red");
+        //             // 3. make it square after 0.3
+        //             setTimeout(function () {
+        //                 el.classList.remove("circle");
+        //                 // 4. make it purple after 0.3s
+        //                 setTimeout(function () {
+        //                     el.classList.remove("red");
+        //                     el.classList.remove("purple");
+        //                     // 5. fade out after 0.5 seconds
+        //                     setTimeout(function () {
+        //                         el.classList.add('fadeOut');
+        //                     })
+        //                 }, 300);
+        //             }, 300);
+        //         }, 500);
+        //     }, 2000);
+        // });
+        // function makePizza(toppings) {
+        //     const pizzaPromise = new Promise(function (resolve, reject) {
+        //         resolve(`Here is your pizza 🍕 with the toppings ${toppings.join(' ')}`);
+        //     });
+        //     return pizzaPromise;
+        // }
+        // const pepperoniPromise = makePizza(['pepperoni']);
+        // const canadianPromise = makePizza(['pepperoni', 'mushroom', 'onions'])
+        // console.log(pepperoniPromise, canadianPromise);
+        // pepperoniPromise.then(function (pizza) {
+        //     console.log("Ahh I got it!");
+        //     console.log(pizza);
+        // });
+        // function makePizza(toppings) {
+        //     return new Promise(function (resolve, reject) {
+        //         // wait 1 second for the pizza to cook
+        //         setTimeout(function () {
+        //             resolve(`Here is your pizza 🍕 with the toppings ${toppings.join(' ')}`);
+        //         }, 1000)
+        //         // if something went wrong, we can reject this promise
+        //     });
+        //     return pizzaPromise;
+        // }
+        // const pepperoniPromise = makePizza(['pepperoni']);
+        // pepperoniPromise.then(function (pizza) {
+        //     pepperoniPromise.then(function (pizza) {
+        //         console.log('Ahhh got it!');
+        //         console.log(pizza);
+        //     });
+        //     console.log('finishing');
+        //     console.log("Ahh I got it!");
+        //     console.log(pizza);
+        //     console.log('Starting');
+
+        // });
+        // console.log('First');
+        // makePizza(['pepperoni', 'ham'])
+        //     .then(function (pizza) {
+        //         console.log(pizza);
+        //         return makePizza(['ham', 'cheese']);
+        //     })
+        //     .then(function (pizza) {
+        //         console.log(pizza);
+        //         return makePizza(['hot peppers', 'onion', 'feta']);
+        //     })
+        //     .then(function (pizza) {
+        //         console.log(pizza);
+        //         return makePizza();
+        //     })
+        //     .then(function (pizza) {
+        //         console.log(pizza);
+        //         return makePizza(['one', 'two', 'three', 'four', 'one', 'two', 'three', 'four', 'one', 'two', 'three', 'four']);
+        //     })
+        //     .then(pizza => {
+        //         console.log('All done! here is your last pizza');
+        //         console.log(pizza);
+        //     })
+
+        // console.log('Right after');
+        // function makePizza(toppings = []) {
+        //     const pizzaPromise = new Promise(function (resolve, reject) {
+        //         const amountOfTimeToBake = 500 + (toppings.length * 200);
+        //         // wait 1 second for the pizza to cook
+        //         setTimeout(function () {
+        //             resolve(`Here is your pizza 🍕 with the toppings ${toppings.join(' ')}`);
+        //         }, amountOfTimeToBake)
+        //         // if something went wrong, we can reject this promise
+        //     });
+        //     return pizzaPromise;
+        // }
+        // Run them concurrently
+        // const pizzaPromise1 = makePizza(['hot peppers', 'onion', 'feta']);
+        // const pizzaPromise2 = makePizza(['one', 'two', 'three', 'four', 'one', 'two', 'three', 'four', 'one', 'two', 'three', 'four']);
+        // const pizzaPromise3 = makePizza(['ham', 'cheese']);
+        // const dinnerPromise = Promise.all([pizzaPromise1, pizzaPromise2, pizzaPromise3]);
+        // dinnerPromise.then(function ([hottie, garbagePail, hamAndCheese]) {
+        //     console.log(hottie, garbagePail, hamAndCheese);
+        // });
+        // const firstPizzaPromise = Promise.race([pizzaPromise1, pizzaPromise2, pizzaPromise3]);
+        // firstPizzaPromise.then(pizza => {
+        //     console.log('You must be hungry, here is the first one ready');
+        //     console.log(pizza);
+        // })
+        // if (toppings.includes('pineapple')) {
+        //     reject("Seriously? Get out 🍍");
+        // }
+        // makePizza(['cheese', 'pineapple'])
+        //     .then(pizza => {
+        //         console.log(pizza);
+        //     })
+        //     .catch(err => {
+        //         console.log('Oh noooo!!');
+        //         console.log(err);
+        //     })
+        //     const p1 = makePizza(['pep']);
+        // const p2 = makePizza(['pineapple']);
+        // const dinnerPromise2 = Promise.all([p1, p2]).catch(handleError);
+        // dinnerPromise2
+        //     .then(results => {
+        //         console.log(results);
+        //     })
+        // function animate(e) {
+        //     const el = e.currentTarget;
+        //     // 1. change the text to GO when clicked
+        //     el.textContent = 'GO';
+        //     // 2. make it a circle after 2 seconds
+        //     wait(200)
+        //         .then(() => {
+        //             // 3. make it red after 0.5 seconds
+        //             el.classList.add('red');
+        //             return wait(250);
+        //         })
+        //         .then(() => {
+        //             el.classList.remove('circle');
+        //             return wait(500);
+        //         })
+        //         .then(() => {
+        //             el.classList.remove('red');
+        //             el.classList.add('purple');
+        //             return wait(500);
+        //         })
+        //         .then(() => {
+        //             el.classList.add('fadeOut');
+        //         })
+        // }
+        // const wait = (ms = 0) => new Promise(resolve => setTimeout(resolve, ms));
+        // wait(200).then(() => {
+        //     console.log('Done');
+        // })
+
+        // function wait(ms = 0) {
+        //     return new Promise((resolve) => {
+        //         setTimeout(resolve, ms);
+        //     })
+        // }
+        // async function go() {
+        //     console.log('Starting');
+        //     await wait(2000);
+        //     console.log('running');
+        //     await wait(200);
+        //     console.log('ending');
+        // }
+        // go();
+        // function wait(ms = 0) {
+        //     return new Promise((resolve) => {
+        //         setTimeout(resolve, ms);
+        //     })
+        // }
+        // function makePizza(toppings = []) {
+        //     return new Promise(function (resolve, reject) {
+        //         // reject if people try with pineapple
+        //         if (toppings.includes('pineapple')) {
+        //             reject('Seriously? Get out 🍍');
+        //         }
+        //         const amountOfTimeToBake = 500 + (toppings.length * 200);
+        //         // wait 1 second for the pizza to cook:
+        //         setTimeout(function () {
+        //             // when you are ready, you can resolve this promise
+        //             resolve(`Here is your pizza 🍕 with the toppings ${toppings.join(' ')}`);
+        //         }, amountOfTimeToBake);
+        //         // if something went wrong, we can reject this promise;
+        //     });
+        // }
+        // function handleError(err) {
+        //     console.log('Ohhhh nooo');
+        //     console.log(err);
+        // }
+        // async function go() {
+        //     const pizza = await makePizza(['pineapple']).catch(handleError);
+        //     console.log(pizza);
+        //     return pizza;
+        // }
+        // async function goGo() {
+        //     const result = await go();
+        // }
+        // goGo().catch(handleError);
+        // function handleError(err) {
+        //     console.log('Ohhhh nooo');
+        //     console.log(err);
+        // }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+    <!-- <style>
+        .wrapper {
+            flex-direction: column;
+            text-align: center;
+            background-color: orange;
+            color: white;
+            height: 500px;
+        }
+    </style> -->
+
+</head>
+
+<body>
+    <!-- <div class="wrapper">
+        <div class="joke">
+            <p> Dad Jokes</p>
+        </div>
+        <button class="getjokes">Get A Joke</button>
+    </div> -->
+
+    <script>
+        // const baseEndpoint = "https://api.github.com";
+        // const usersEndpoint = `${baseEndpoint}/users`;
+        // const userEl = document.querySelector(".user");
+        // async function displayUser(username) {
+        //     userEl.textContent = "loading...";
+        //     const response = await fetch(`${usersEndpoint}/${username}`);
+        //     const data = await response.json();
+        //     console.log(data);
+        //     console.log(data.blog);
+        //     console.log(data.name);
+        //     console.log(data.location);
+        //     userEl.textContent = `${data.name} - ${data.blog}`;
+        // }
+        // function handleError(err) {
+        //     console.log("OH NO!");
+        //     console.log(err);
+        // }
+        // displayUser("stolinski").catch(handleError);
+        // const baseEndpoint = "http://www.recipepuppy.com/api";
+        // const proxy = "https://cors-anywhere.herokuapp.com/";
+        // async function fetchRecipes(query) {
+        //     const res = await fetch(`${proxy}${baseEndpoint}?q=${query}`);
+        //     const data = await res.json();
+        // }
+        // fetchRecipes("pizza");
+        // function handleSubmit(event) {
+        //     event.preventDefault();
+        //     console.log(event.currentTarget);
+        // }
+        // form.addEventListener("submit", handleSubmit);
+        // fetchRecipes("pizza");
+        // const jokeButton = document.querySelector(".getJoke");
+        // const jokeHolder = document.querySelector(".joke");
+        // const buttonText = [
+        //     "Ugh.",
+        //     "🤦🏻‍♂️",
+        //     "omg dad.",
+        //     "you are the worst",
+        //     "seriously",
+        //     "stop it.",
+        //     "please stop",
+        //     "that was the worst one",
+        // ];
+        // async function fetchJoke() {
+        //     const response = await fetch("https://icanhazdadjoke.com");
+        //     console.log(response);
+        // }
+        // const joke = response.json();
+        // console.log(joke);
+        // fetchJoke();
+        //     function randomItemFromArray(arr, not) {
+        //         const item = arr[Math.floor(Math.random() * arr.length)];
+        //         return item;
+        //         randomItemFromArray(buttonText);
+        //     }
+        // const fromSelect = document.querySelector('[name="from_currency"]');
+        // const fromInput = document.querySelector('[name="from_amount"]');
+        // const toSelect = document.querySelector('[name="to_currency"]');
+        // const toEl = document.querySelector(".to_amount");
+        // const form = document.querySelector(".app form");
+        // const endpoint = "https://api.exchangeratesapi.io/latest";
+        // const ratesByBase = {};
+        // const currencies = {
+        //     USD: "United States Dollar",
+        //     AUD: "Australian Dollar",
+        //     BGN: "Bulgarian Lev",
+        //     BRL: "Brazilian Real",
+        //     CAD: "Canadian Dollar",
+        //     CHF: "Swiss Franc",
+        //     CNY: "Chinese Yuan",
+        //     CZK: "Czech Republic Koruna",
+        //     DKK: "Danish Krone",
+        //     GBP: "British Pound Sterling",
+        //     HKD: "Hong Kong Dollar",
+        //     HRK: "Croatian Kuna",
+        //     HUF: "Hungarian Forint",
+        //     IDR: "Indonesian Rupiah",
+        //     ILS: "Israeli New Sheqel",
+        //     INR: "Indian Rupee",
+        //     JPY: "Japanese Yen",
+        //     KRW: "South Korean Won",
+        //     MXN: "Mexican Peso",
+        //     MYR: "Malaysian Ringgit",
+        //     NOK: "Norwegian Krone",
+        //     NZD: "New Zealand Dollar",
+        //     PHP: "Philippine Peso",
+        //     PLN: "Polish Zloty",
+        //     RON: "Romanian Leu",
+        //     RUB: "Russian Ruble",
+        //     SEK: "Swedish Krona",
+        //     SGD: "Singapore Dollar",
+        //     THB: "Thai Baht",
+        //     TRY: "Turkish Lira",
+        //     ZAR: "South African Rand",
+        //     EUR: "Euro",
+        // };
+        // function generateOptions(options) {
+        //     return Object.entries(options)
+        //         .map(([currencyCode, currencyName]) =>
+        //             `<option value="${currencyCode}">${currencyCode} - ${currencyName}</option>`
+        //         )
+        //         .join("");
+        // }
+        // async function fetchRates(base = "USD") {
+        //     const res = await fetch(`${endpoint}?base=${base}`);
+        //     const rates = await res.json();
+        //     return rates;
+        // }
+        // async function convert(amount, from, to) {
+        //     // first check if we even have the rates to convert from that currency
+        //     if (!ratesByBase[from]) {
+        //         console.log(
+        //             `Oh no, we dont have ${from} to convert to ${to}. So gets go get it!`
+        //         );
+        //         const rates = await fetchRates(from);
+        //         console.log(rates);
+        //         // store them for next time
+        //         ratesByBase[from] = rates;
+        //     }
+        //     // convert that amount that they passed it
+        //     const rate = ratesByBase[from].rates[to];
+        //     const convertedAmount = rate * amount;
+        //     console.log(`${amount} ${from} is ${convertedAmount} in ${to}`);
+        //     return convertedAmount;
+        // }
+        // function formatCurrency(amount, currency) {
+        //     return Intl.NumberFormat("en-US", {
+        //         style: "currency",
+        //         currency,
+        //     }).format(amount);
+        // }
+        // async function handleInput(e) {
+        //     const rawAmount = await convert(
+        //         fromInput.value,
+        //         fromSelect.value,
+        //         toSelect.value
+        //     );
+        //     toEl.textContent = formatCurrency(rawAmount, toSelect.value);
+        // }
+        // const optionsHTML = generateOptions(currencies);
+        // // populate the options elements
+        // fromSelect.innerHTML = optionsHTML;
+        // toSelect.innerHTML = optionsHTML;
+        // form.addEventListener("input", handleInput);
+        async function go() {
+            console.log("Going!");
+            await (2000);
+            console.log("Ending!");
+        }
+        go();
+    </script>
+</body>
+
+</html>
